@@ -51,7 +51,7 @@ public class Qes1_13 {
 		// 整数型		1000
 		i = 1000;
 		// 長整数型		10000
-		l = 10000;
+		l = 10000l;
 		// 単精度浮小数点数型		9.5
 		f = 9.5f;
 		// 倍精度浮動小数点数型		10.5
@@ -106,8 +106,10 @@ public class Qes1_13 {
 		 * BMIの計算
 		 */
 		float bmi = weight / ((height / 100) * (height / 100));
+		//小数点第2位で四捨五入
+		double d1 = ((double) Math.round(bmi * 10)) / 10;
 		//コンソール出力
-		System.out.println("BMIは" + bmi + "です");
+		System.out.println("BMIは" + d1 + "です");
 		System.out.println("");
 
 		/* 8
@@ -121,7 +123,7 @@ public class Qes1_13 {
 		//bmi計算
 		bmi = weight / ((height / 100) * (height / 100));
 		//小数点第2位で四捨五入
-		double d1 = ((double) Math.round(bmi * 10)) / 10;
+		d1 = ((double) Math.round(bmi * 10)) / 10;
 		//コンソール出力
 		System.out.println("初めまして" + name + "です");
 		System.out.println("年齢は" + age + "歳です");
